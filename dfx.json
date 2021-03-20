@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "hello_rust": {
+      "build": "npm run wasm",
+      "type": "custom",
+      "wasm": "target/wasm32-unknown-unknown/release/hello_rust_o.wasm",
+      "candid": "src/hello_rust/hello_rust.did"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.6.24",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "name": "hello_rust_assets",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "b1": "cargo build --target wasm32-unknown-unknown --package hello_rust --release",
+    "b2": "./target/bin/ic-cdk-optimizer ./target/wasm32-unknown-unknown/release/hello_rust.wasm -o ./target/wasm32-unknown-unknown/release/hello_rust_o.wasm",
+    "wasm": "npm run b1 && npm run b2",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@dfinity/agent": "0.6.21",
+    "terser-webpack-plugin": "2.2.2",
+    "webpack": "4.41.3",
+    "webpack-cli": "3.3.10"
+  }
+}

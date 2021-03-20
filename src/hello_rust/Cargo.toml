@@ -1,0 +1,16 @@
+[package]
+name = "hello_rust"
+version = "0.1.0"
+authors = ["Your Name <your-email@example.com>"]
+edition = "2018"
+
+[lib]
+path = "main.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+ic-cdk = { path = "../../../cdk-rs/src/ic-cdk", version = "0.2.1" }
+ic-cdk-macros = { path = "../../../cdk-rs/src/ic-cdk-macros", version = "0.2.1" }
+ic-types = "0.1.2"
+wasmi = "0.8.0"
+wat = "1.0"
